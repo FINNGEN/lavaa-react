@@ -25,5 +25,5 @@ export interface Phenotype {
 }
 
 export type color_map = {[p: string]: string}
-export interface Props { colorByCategory : color_map , dataprop : Phenotype }
+export interface Props { colorByCategory : color_map , dataprop : Phenotype[] }
 export function Lavaa(prop : Props): JSX.Element
