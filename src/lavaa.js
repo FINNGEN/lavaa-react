@@ -2215,20 +2215,11 @@ function Lavaa (props) {
 
           <div id="downloadImg-block">
             <button id="download" className="button_styled" onClick={() => {downloadImgClick()}}>download image</button>
-            <div className="reportIssue">
-              <div className="reportIcon">?</div>
-              <a id="report"
-                 href="mailto:stella.keppo@aalto.fi?subject=Issue report from LAVAA" className="h5"
-                 style={{ paddingLeft: '0.5vw' }}>Report issue</a>
-            </div>
-          </div>
-
-          <div id="chartInner">
+          <div id="chartInner" style="z-index: -1;">
           </div>
         </div>
       </div>
 
-      {/* mwm1 : https://stackoverflow.com/questions/52801051/react-site-warning-the-href-attribute-requires-a-valid-address-provide-a-valid */}
       <div id="download-options">
         <div id="download-options-inner">
           <a href="/#" id="downloadSvg" download="LAVAA_volcano.svg">
