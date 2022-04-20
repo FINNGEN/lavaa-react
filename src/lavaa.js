@@ -2193,7 +2193,7 @@ function Lavaa (props) {
 
           <div id="downloadImg-block">
             <button id="download" className="button_styled" onClick={() => {downloadImgClick()}}>download image</button>
-          <div id="chartInner" style="z-index: -1;">
+          <div id="chartInner" style={{ zIndex: -1 }}>
           </div>
         </div>
       </div>
