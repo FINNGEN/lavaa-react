@@ -2096,32 +2096,10 @@ function Lavaa (props) {
     removeBrush3()
   }
 
-  /*const [selection, setDataSelection] = useState([])
-  function readData(){
-    //format d3 data reader for tab separated files, then use setDataRaw
-    d3.dsv("\t", data).then(selection=>{
-      //defining new selection
-      selection = newSelection
-      setDataSelection(newSelection);
-    })
-    console.log(newSelection);
-  }*/
-
   return (
     <>
 
-      {/*This structure was for the start screen*/}
-      {/*<div id="start">
-  <div id="input-btn-block-start">
-      <input id="data-file-start" type="file" className="custom-file-input-start"/>
-  </div>
-</div>
-
-  <div id="afterStart">*/}
-
-      <div style={{
-        position: 'relative'
-      }}>
+      <div style={{position: 'relative' }}>
         <div id="btn-block">
           <div id="btn-block-toggle">
             <button id="button_styled" onClick={() => tableClick()}>Clear selection</button>
@@ -2224,7 +2202,6 @@ function Lavaa (props) {
         </div>
       </div>
 
-      {/* mwm1 : https://stackoverflow.com/questions/52801051/react-site-warning-the-href-attribute-requires-a-valid-address-provide-a-valid */}
       <div id="download-options">
         <div id="download-options-inner">
           <a href="/#" id="downloadSvg" download="LAVAA_volcano.svg">
@@ -2243,9 +2220,7 @@ function Lavaa (props) {
         <div id="upload-options"></div>
       </div>
 
-      {/*</div>*/}
-      {/*after start screen wrap div end*/}
-
+      </div>
     </>
 
   )
