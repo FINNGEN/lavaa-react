@@ -296,7 +296,7 @@ function Lavaa (props) {
         const widthValue = 320
 
         const svg = d3.select('#chartInner').append('svg')
-          .attr('viewBox', `2 -10 320 330`)
+          .attr('viewBox', `2 -10 320 260`)
           .attr('stroke-width', '0.3')
         const margin = {
           top: 50,
