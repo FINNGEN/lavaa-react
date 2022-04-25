@@ -396,7 +396,7 @@ button.close:hover{
       display: none;
       float: right;/*float right to the chart*/
       position: relative;
-      top: 43vw;/*position right below the chart*/
+      top: 40vw;/*position right below the chart*/
       z-index: 99;
 }
 
