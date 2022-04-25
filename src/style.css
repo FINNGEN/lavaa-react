@@ -187,7 +187,7 @@ text.annotation-label {
       letter-spacing: 0.2px;
       font-size: 12px;
       padding-top: 1vh;
-      line-height: 15px; 
+      line-height: 15px;
       font-smooth: subpixel-antialiased;
     }
 
@@ -245,7 +245,7 @@ text.label{
 }
 
 /*----------------button styles---------------*/
-#button_styled { 
+#button_styled {
       font-family: 'Roboto', sans-serif;
       font-size: 0.8em;
       margin-right: 1vw;
@@ -255,7 +255,7 @@ text.label{
       border-radius: 5px;
       cursor: pointer;
     }
-.button_styled { 
+.button_styled {
   font-family: 'Roboto', sans-serif;
   font-size: 0.8em;
   margin-right: 1vw;
@@ -275,7 +275,7 @@ text.label{
   border-radius: 5px;
   cursor: pointer;
 }
-#button_styled-2 { 
+#button_styled-2 {
   font-family: 'Roboto', sans-serif;
   font-size: 0.8em;
   margin-right: 1vw;
@@ -286,7 +286,7 @@ text.label{
   cursor: pointer;
     }
 /*text button with arrow on top of the legend block*/
-#button_legend { 
+#button_legend {
       display: block;/*center the text*/
       background: transparent;
       font-family: 'Roboto', sans-serif;
@@ -319,10 +319,10 @@ text.label{
       border-radius: 3px;
       padding: 8px 25px;
       background: white;
-      margin-right: 2vw; 
+      margin-right: 2vw;
       cursor: pointer;
     }
-a#button_styled_download { 
+a#button_styled_download {
       font-family: 'Roboto', sans-serif;
       font-size: 1em;
       margin-right: 1vw;
@@ -371,7 +371,7 @@ a#button_styled_download {
       font: normal 1em/1 Arial, sans-serif;
       display: inline-block;
 }
-.ico-times:before{ content: "\2716"; 
+.ico-times:before{ content: "\2716";
 }
 button.close{
   background: white;
@@ -432,7 +432,7 @@ padding-top: 3vh;
     #category {
       width: 10vw;
       float: left;
-      overflow-x: auto; 
+      overflow-x: auto;
     }
     #phenotype {
       width: 11vw;
@@ -606,7 +606,7 @@ body {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 1%;
     vertical-align: top;
     overflow: hidden;
     }

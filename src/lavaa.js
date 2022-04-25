@@ -2216,10 +2216,6 @@ function Lavaa (props) {
           <div id="downloadImg-block">
             <button id="download" className="button_styled" onClick={() => {downloadImgClick()}}>download image</button>
             <div className="reportIssue">
-              <div className="reportIcon">?</div>
-              <a id="report"
-                 href="mailto:stella.keppo@aalto.fi?subject=Issue report from LAVAA" className="h5"
-                 style={{ paddingLeft: '0.5vw' }}>Report issue</a>
             </div>
           </div>
 
