@@ -1,2 +1,2 @@
-import Lavaa from 'lavaa'
+import Lavaa from './lavaa'
 export { Lavaa }

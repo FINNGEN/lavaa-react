@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "types": [
+	  "reflect-metadata",
+	  "jest"
+      ],
+    "module": "esnext",
+    "jsx": "react",
+    "target": "es6",
+    "noImplicitThis": false,
+    "esModuleInterop": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": false,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "lib": [
+      "dom",
+      "es6",
+      "scripthost",
+      "es2018.promise",
+      "es2018.RegExp"
+    ],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": [
+    "js/**/*",
+    "types/**/*"
+  ],
+  "exclude": [
+    "typings",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

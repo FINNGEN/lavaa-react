@@ -2096,44 +2096,21 @@ function Lavaa (props) {
     removeBrush3()
   }
 
-  /*const [selection, setDataSelection] = useState([])
-  function readData(){
-    //format d3 data reader for tab separated files, then use setDataRaw
-    d3.dsv("\t", data).then(selection=>{
-      //defining new selection
-      selection = newSelection
-      setDataSelection(newSelection);
-    })
-    console.log(newSelection);
-  }*/
-
   return (
     <>
 
       {/*This structure was for the start screen*/}
-      {/*<div id="start">
-  <div id="input-btn-block-start">
-      <input id="data-file-start" type="file" className="custom-file-input-start"/>
-  </div>
-</div>
-
-  <div id="afterStart">*/}
-
       <div style={{
         position: 'relative'
       }}>
         <div id="btn-block">
           <div id="btn-block-toggle">
             <button id="button_styled" onClick={() => tableClick()}>Clear selection</button>
-            <a href="/#">
-              <button className="button_styled" id="button_styled_download">Download table</button>
-            </a>
+            <button className="button_styled" id="button_styled_download">Download table</button>
           </div>
           <div id="btn-block-2">
             <button id="button_styled-2" onClick={() => tableClick()}>Clear selection</button>
-            <a href="/#">
-              <button className="button_styled" id="button_styled_download_zoom">Download table</button>
-            </a>
+            <button className="button_styled" id="button_styled_download_zoom">Download table</button>
           </div>
 
           <div id="info-column-wrapper">
@@ -2226,17 +2203,17 @@ function Lavaa (props) {
 
       {/* mwm1 : https://stackoverflow.com/questions/52801051/react-site-warning-the-href-attribute-requires-a-valid-address-provide-a-valid */}
       <div id="download-options">
-        <div id="download-options-inner">
-          <a href="/#" id="downloadSvg" download="LAVAA_volcano.svg">
-            <button className="downloadImgBtn" onClick={() => hideDownloadOptions()}>svg</button>
-          </a>
-          <a href="/#" id="downloadJpeg" download="LAVAA_volcano">
-            <button className="downloadImgBtn" onClick={() => hideDownloadOptions()}>jpeg</button>
-          </a>
-          <button className="close" id="closeBtn" onClick={() => hideDownloadOptions()}>
-            <i className="ico-times" role="img" aria-label="Cancel"></i>
-          </button>
-        </div>
+          <div id="download-options-inner">
+	      <a href="/#" id="downloadSvg" download="LAVAA_volcano.svg">
+		  <button className="downloadImgBtn" onClick={() => hideDownloadOptions()}>svg</button>
+              </a>
+              <a href="/#" id="downloadJpeg" download="LAVAA_volcano">
+		  <button className="downloadImgBtn" onClick={() => hideDownloadOptions()}>jpeg</button>
+	      </a>
+              <button className="close" id="closeBtn" onClick={() => hideDownloadOptions()}>
+		  <i className="ico-times" role="img" aria-label="Cancel"></i>
+              </button>
+          </div>
       </div>
 
       <div id="upload-options-background">
