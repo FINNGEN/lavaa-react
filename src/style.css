@@ -430,30 +430,36 @@ padding-top: 3vh;
     }
    /*individual columns styling, some need more space than others*/
     #category {
-      width: 10vw;
+      width: 8vw;
       float: left;
       overflow-x: auto;
     }
     #phenotype {
-      width: 11vw;
+      width: 10vw;
       padding-left: 1vw;
       float: left;
       overflow-x: auto;
     }
     #pval {
-      width: 5vw;
+      width: 4vw;
       padding-left: 1vw;
       float: left;
       overflow-x: auto;
     }
     #beta {
-      width: 5vw;
+      width: 4vw;
+      padding-left: 1vw;
+      float: left;
+      overflow-x: auto;
+    }
+    #pip {
+      width: 4vw;
       padding-left: 1vw;
       float: left;
       overflow-x: auto;
     }
     #case-control {
-      width: 10vw;
+      width: 8vw;
       padding-left: 1vw;
       float: left;
       overflow-x: auto;

@@ -8,6 +8,14 @@ const d3 = {
   tip: d3tip
 }
 
+export const pValueSentinel = 5e-324;
+const pValueFormatter = (value) => (value === pValueSentinel) ? ` << ${pValueSentinel}` :  isNaN(+value) ?value:value.toExponential(1);
+const decimalFormatter = (value) => isNaN(+value) ? 'NA' : (+value).toPrecision(3);
+const scientificFormatter = (value) => isNaN(+value) ? 'NA' : (+value).toExponential(1);
+const numberFormatter = (value) => isNaN(+value) ? 'NA' : +value;
+
+
+
 function Lavaa (props) {
 
   const [selection, setSelection] = useState([])
@@ -434,7 +442,14 @@ function Lavaa (props) {
           .attr('class', 'd3-tip')
           .offset([-5, 0])
           .html((event, d) => {
-          return d.category + '<br>' + '<br>' + d.phenostring + '<br>' + '<br>' + 'p-value: ' + d.pval + '<br>' + 'beta value: ' + d.beta + '<br>' + 'cases / controls: ' + d.n_case + ' / ' + d.n_control + '<br>' + 'pip: ' + d.pip
+              return `
+                ${d.category}<br/><br/>
+                ${d.phenostring}<br/><br/>
+                p-value: ${pValueFormatter(d.pval)}<br/>
+                beta value: ${decimalFormatter(d.beta)}<br/>
+                cases / controls: ${numberFormatter(d.n_case)} / ${numberFormatter(d.n_control)} <br/>
+                pip: ${decimalFormatter(d.pip)}
+              `
         })
         svg.call(tip)
 
@@ -636,6 +651,7 @@ function Lavaa (props) {
         const phenoCol = d3.select('#phenotype')
         const pvalCol = d3.select('#pval')
         const betaCol = d3.select('#beta')
+	const pipCol = d3.select('#pip')
         const caseCol = d3.select('#case-control')
         //brush event inside the first state
         brush.on('end', function (event, d) {
@@ -678,23 +694,23 @@ function Lavaa (props) {
               return i * 12
             }).html(function (d) {
             return d.phenostring
-          })
+            })
+
           pvalCol.selectAll('p').data((removeDuplicates(selection2))).enter().append('div').attr('class', 'myScroll').style('overflow-x', 'auto').append('p').attr('class', 'info').attr('x', 10).attr('y', function (d, i) {
             return i * 12
-          }).html(function (d) {
-            return d.pval
-          })
+          }).html((d)=> pValueFormatter(d.pval))
+
           betaCol.selectAll('p').data((removeDuplicates(selection2))).enter().append('div').attr('class', 'myScroll').style('overflow-x', 'auto').append('p').attr('class', 'info').attr('x', 10).attr('y', function (d, i) {
             return i * 12
-          }).html(function (d) {
-            return d.beta
-          })
+          }).html((d) => decimalFormatter(d.beta))
+
+	  pipCol.selectAll('p').data((removeDuplicates(selection2))).enter().append('div').attr('class', 'myScroll').style('overflow-x', 'auto').append('p').attr('class', 'info').attr('x', 10).attr('y', function (d, i) {
+            return i * 12
+          }).html((d) => `${decimalFormatter(d.pip)}`)
+
           caseCol.selectAll('p').data((removeDuplicates(selection2))).enter().append('div').attr('class', 'myScroll').style('overflow-x', 'auto').append('p').attr('class', 'info').attr('x', 10).attr('y', function (d, i) {
             return i * 12
-          }).html(function (d) {
-            return d.n_case + ' / ' + d.n_case
-
-          })
+          }).html((d) => `${numberFormatter(d.n_case)} / ${numberFormatter(d.n_case)}`)
           setSelection(selection2)
         })
 
@@ -2116,19 +2132,22 @@ function Lavaa (props) {
           <div id="info-column-wrapper">
             <div id="info-column">
               <div id="category">
-                <h5 className="h5" style={{ width: '10vw' }}>Category</h5>
+                <h5 className="h5" style={{ width: '8vw' }}>Category</h5>
               </div>
               <div id="phenotype">
-                <h5 className="h5" style={{ width: '10vw' }}>Phenotype</h5>
+                <h5 className="h5" style={{ width: '8vw' }}>Phenotype</h5>
               </div>
               <div id="pval">
-                <h5 className="h5" style={{ maxWidth: '10vw' }}>P-value</h5>
+                <h5 className="h5" style={{ maxWidth: '8vw' }}>P-value</h5>
               </div>
               <div id="beta">
-                <h5 className="h5" style={{ maxWidth: '10vw' }}>Beta</h5>
+                <h5 className="h5" style={{ maxWidth: '8vw' }}>Beta</h5>
+              </div>
+              <div id="pip">
+                <h5 className="h5" style={{ maxWidth: '8vw' }}>PIP</h5>
               </div>
               <div id="case-control">
-                <h5 className="h5" style={{ maxWidth: '10vw' }}>Cases/Controls</h5>
+                <h5 className="h5" style={{ maxWidth: '8vw' }}>Cases/Controls</h5>
               </div>
             </div>
 
