@@ -339,6 +339,11 @@ function Lavaa (props) {
         var min = d3.min(data, function (d) {
           return d.pval
         })
+	/* Number.MIN_VALUE  is used by pheweb to indicate a floating point
+           underflow.  It causes problems yScale causing it to return NaN for
+           all values.  The fix is to use a slightly larger number for the
+           minimum of the range. */
+	min = Math.max(min,Number.MIN_VALUE * 10.0)
         //max for the case numbers
         var maxCases = d3.max(data, function (d) {
           return d.n_case
