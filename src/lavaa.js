@@ -2184,28 +2184,28 @@ function Lavaa (props) {
 
                 <div id="ZoomHull">
                   <label className="h5">Convex hulls
-                    <input type="checkbox" id="hullCheckboxZoom" />
+                    <input className="lavaa" type="checkbox" id="hullCheckboxZoom" />
                     <span className="checkmark-custom"></span>
                   </label>
                 </div>
 
                 <div id="hullCheckboxDiv" style={{ marginTop: '1%' }}>
                   <label className="h5" style={{ paddingLeft: '1vw' }}>Convex hulls
-                    <input type="checkbox" id="hullCheckbox" />
+                    <input className="lavaa" type="checkbox" id="hullCheckbox" />
                     <span className="checkmark-custom" id="hullCheckMark"></span>
                   </label>
                 </div>
 
                 <div id="significanceCheckboxDiv" style={{ marginTop: '1%' }}>
                   <label className="h5" style={{ paddingLeft: '4vw' }}>Show significant
-                    <input type="checkbox" id="significanceCheckbox" />
+                    <input className="lavaa" type="checkbox" id="significanceCheckbox" />
                     <span className="checkmark-custom-2"></span>
                   </label>
                 </div>
 
                 <div id="pipCheckboxDiv" style={{ marginTop: '1%' }}>
                   <label className="h5" style={{ paddingLeft: '4vw' }}>Show PIP &gt; 0
-                    <input type="checkbox" id="pipCheckbox" />
+                    <input className="lavaa" type="checkbox" id="pipCheckbox" />
                     <span className="checkmark-custom-3"></span>
                   </label>
                 </div>
