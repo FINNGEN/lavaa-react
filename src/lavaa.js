@@ -715,7 +715,7 @@ function Lavaa (props) {
 
           caseCol.selectAll('p').data((removeDuplicates(selection2))).enter().append('div').attr('class', 'myScroll').style('overflow-x', 'auto').append('p').attr('class', 'info').attr('x', 10).attr('y', function (d, i) {
             return i * 12
-          }).html((d) => `${numberFormatter(d.n_case)} / ${numberFormatter(d.n_case)}`)
+          }).html((d) => `${numberFormatter(d.n_case)} / ${numberFormatter(d.n_control)}`)
           setSelection(selection2)
         })
 
